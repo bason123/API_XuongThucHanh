@@ -64,7 +64,8 @@ const deleteNews = async (id) =>{
 const updateNews = async (id, data) =>{
     try {
         const {title, content, image, category_id} = data;
-        const news = await ProductModel.findById(id);
+        console.log(id, title)
+        const news = await newsModel.findById(id);
         if(!news) throw new Error('Không tìm thấy sản phẩm');
         news.title = title || news.title;
         news.content = content || news.content;

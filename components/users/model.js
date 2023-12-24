@@ -8,15 +8,10 @@ const userSchema = new Schema({
     password:{type:String, required:true},
     phone:{type:String, required:false},
     avatar:{type:String, required:false},
-    // phone:{type:String, required:true},
-    role:{type:Number, },
+    Country:{type:String, default:null},
+    role:{type:Number, required:false},
     isVerified: {type: Boolean, default: false}, // xác thực tài khoản
     dob: {type: String, required:false},
-    // age:{type:Number, required:true},
-    // gender:{type:String, required:true},
-    // level:{type:Number, required:false},
-    // resetToken:{type:String},
-    // resetTokenExpiration:{type:Number}
     created_at: {type: Date, default: Date.now},
     updated_at: {type: Date, default: Date.now},
     // created_by: {type: ObjectID, required: true, ref: 'User'},
